@@ -35,6 +35,7 @@ git branch -a
 
 git branch subtract
 git checkout subtract
+git checkout -b subtract # Command to create new branch and checkout the same
 git status
 
 git push -u origin subtract
