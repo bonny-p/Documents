@@ -1,0 +1,49 @@
+GIT basics:
+
+Reference video: https://www.youtube.com/watch?v=HVsySz-h9r4&t=1533s&ab_channel=CoreySchafer
+
+git --version
+ssh-keygen -t rsa -b 4096 -C "vatsal_11_1992@yahoo.com"
+
+git config --global user.name "Vatsal Patel"
+git config --global user.email "vatsal_11_1992@yahoo.com"
+git config --global --list
+
+git help config
+git cofig --help
+
+git init
+touch .gitignore
+git clone URL
+
+git diff
+git add xyz.c
+git add -A
+
+git rm --cached xyz.c
+git reset xyz.c
+git restore xyz.c
+
+git commit -m "Commit message."
+git pull origin master
+git push origin master
+
+git log
+
+git remote -v
+git branch -a
+
+git branch subtract
+git checkout subtract
+git status
+
+git push -u origin subtract
+
+git checkout master
+git pull origin master
+git branch --merged
+git merge subtract
+git push origin master
+git branch -d subtract
+git push origin --delete subtract
+
