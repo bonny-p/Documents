@@ -2,6 +2,8 @@ GIT basics:
 
 Reference video: https://www.youtube.com/watch?v=HVsySz-h9r4&t=1533s&ab_channel=CoreySchafer
 
+################--Configuration--##################
+
 git --version
 ssh-keygen -t rsa -b 4096 -C "vatsal_11_1992@yahoo.com"
 
@@ -17,18 +19,32 @@ touch .gitignore
 git clone URL
 
 git diff
+
+#############--Add changes to staging area--#############
+
 git add xyz.c
 git add -A
+git add .
+
+##############--Restore cached changes--##############
 
 git rm --cached xyz.c
 git reset xyz.c
 git restore xyz.c
+git restore --staged xyz.c
+
+################--Commit--###############
 
 git commit -m "Commit message."
+
+###############--Push--###############
+
 git pull origin master
 git push origin master
 
 git log
+
+################--Branch--#################
 
 git remote -v
 git branch -a
@@ -40,11 +56,28 @@ git status
 
 git push -u origin subtract
 
+################--Merge--##################
+
 git checkout master
 git pull origin master
 git branch --merged
 git merge subtract
 git push origin master
-git branch -d subtract
-git push origin --delete subtract
 
+##################--Delete branch--##################
+
+git branch -d subtract
+git push origin -d subtract
+
+################--Tag--#################
+
+git checkout master
+git tag version1
+git tag -a V1 -m "Release 1 with xyz features."
+git tag
+git show version1
+git tag -l "V*"
+git push origin version1
+git push --tags
+git tag -d version1
+git push origin -d version1
